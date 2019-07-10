@@ -20,9 +20,10 @@ var users []User
 
 const DATE_FORMAT = "20060102150405"
 const PORT = "8080"
+var logLocation string = "./logs"
 
 func writeLog(message string) {
-	f, err := os.OpenFile("./logs/testlogfile", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
+	f, err := os.OpenFile(logLocation + "/testlogfile", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
 	if err != nil {
 		log.Fatalf("error opening file: %v", err)
 	}
@@ -35,9 +36,8 @@ func writeLog(message string) {
 
 func main() {
 	writeLog("Starting Application...")
-
 	writeLog(fmt.Sprintf("Application is now running on port %s", PORT))
-	fmt.Println("magic is happening on port 8080")
+	fmt.Print("Started. Listening on port ", PORT)
 
 	//creating local array
 	users = append(users, User{ID: "1", Firstname: "Sachin", Lastname: "Mathew"})
