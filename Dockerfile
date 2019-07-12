@@ -10,4 +10,4 @@ RUN git clone https://github.com/dockerizego/DemoProject.git \
    && rm -rf github.com/ \
    && mkdir logs
    
-CMD["./main"]
+CMD ["./main"]
