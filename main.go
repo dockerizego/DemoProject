@@ -19,7 +19,7 @@ type User struct {
 var users []User
 
 const DATE_FORMAT = "20060102150405"
-const PORT = "8080"
+const PORT = "8085"
 var logLocation string = "./logs"
 
 func writeLog(message string) {
