@@ -10,4 +10,6 @@ RUN git clone https://github.com/dockerizego/DemoProject.git \
    && rm -rf github.com/ \
    && mkdir logs
    
+EXPOSE 8085
+   
 CMD ["./main"]
